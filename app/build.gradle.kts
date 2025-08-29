@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.qrinventoryapp"
+    namespace = "com.example.schoolinventoryapp"
     compileSdk = 36
 
     defaultConfig {
