@@ -1,0 +1,36 @@
+version: 2.1
+
+jobs:
+  unit-tests:
+    docker:
+      - image: cimg/android:2024.01
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - gradle-cache-{{ checksum "build.gradle.kts" }}
+            - gradle-cache-
+
+      - run:
+          name: Run Unit Tests
+          command: ./gradlew testDebugUnitTest
+
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: gradle-cache-{{ checksum "build.gradle.kts" }}
+
+      - run:
+          name: Store JUnit Results
+          command: |
+            mkdir -p test-results
+            find . -type f -path "*/build/test-results/**/*.xml" -exec cp {} test-results/ \;
+
+      - store_test_results:
+          path: test-results
+
+workflows:
+  test-workflow:
+    jobs:
+      - unit-tests

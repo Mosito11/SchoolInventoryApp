@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">QR Inventory App</string>
+    <string name="scanscreen_title">Scan Screen</string>
+    <string name="homescreen_title">Home Screen</string>
+    <string name="user_selection">Select User</string>
+    <string name="room_selection">Select Room</string>
+    <string name="quit">Quit</string>
+    <string name="scan">Scan</string>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
+    <string name="qr_not_found">QR code not found in database</string>
+    <string name="no_qr_scanned">No QR scanned</string>
+    <string name="no_user_found">No User found</string>
+    <string name="no_room_found">No Room found</string>
+    <string name="back">Back</string>
+    <string name="save_incorrect_item">Save Item</string>
+    <string name="new_scan">New Scan</string>
+    <string name="match">Match</string>
+    <string name="mismatch">Mismatch</string>
+    <string name="topbar_title">Application mode: </string>
+    <string name="permission_not_granted">QR code can not be read without camera </string>
+    <string name="incorrect_item_already_exists">Item already listed in tab </string>
+
+</resources>

@@ -1,0 +1,60 @@
+# ====================================
+# Riadkové ukončenia
+# ====================================
+
+# Všetky textové súbory -> LF (Unix štýl)
+* text=auto eol=lf
+
+# Android XML súbory (layout, strings, themes)
+*.xml text eol=lf
+
+# Kotlin a Java zdrojové súbory
+*.kt text eol=lf
+*.java text eol=lf
+
+# Gradle skripty a configy
+*.gradle text eol=lf
+*.gradle.kts text eol=lf
+*.properties text eol=lf
+*.toml text eol=lf
+
+# Markdown a dokumentácia
+*.md text eol=lf
+*.txt text eol=lf
+
+# Shell a skripty
+*.sh text eol=lf
+
+# JSON, CSV, SQLite, databázové súbory
+*.json text eol=lf
+*.csv text eol=lf
+*.db binary
+*.sqlite binary
+
+# ====================================
+# Binárne súbory – nech sa diff/merge neaplikuje
+# ====================================
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.ttf binary
+*.otf binary
+*.keystore binary
+*.jar binary
+*.mp4 binary
+*.zip binary
+
+# ====================================
+# Výnimky pre špecifické prípady
+# ====================================
+
+# Room schema JSON (ak exportuješ schémy pre testovanie)
+schemas/** text eol=lf
+
+# Zložka assets – väčšinou statické súbory ako .db
+assets/** binary
